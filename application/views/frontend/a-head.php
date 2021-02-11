@@ -440,7 +440,7 @@
   .back .info i:before {
     background: linear-gradient(40deg, #355cc9, #438af3);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clips: text;
   }
   .back .info .icon {
     margin-left: 0.3em;
