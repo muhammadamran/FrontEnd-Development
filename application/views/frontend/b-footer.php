@@ -6,7 +6,7 @@
           <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
             <div class="single-footer-caption mb-50">
               <div class="footer-logo">
-                <a href="index.php"><img src="assets/img/logo/logo2_footer.png" class="lingkaran-footer" alt=""></a>
+                <a href="index.php"><img src="<?= base_url('assets/frontend/one/assets/img/logo/logo2_footer.png');?>" class="lingkaran-footer" alt=""></a>
               </div>
             </div>
           </div>
@@ -111,7 +111,8 @@
     }
     }
     typewriter();
-
+</script>
+<script type="text/javascript">
     var aTextdua = new Array(
     "Research in the smart campus area is still growing, where every researcher defines the concept of smart campus with a less thorough perspective that has not been conical in the same conception of the concept. In this paper, we summarize the existing condition of smart campus development in term of features, supported technologies, and applications were built using systematic literature review (SLR) as the standard methodology used to solve any problems by tracing the results of previous research. The problems declared in SLR are commonly called as research question (RQ). To achieve that goal, we define some RQs related to that scope and clarify each question by tracing previous research papers which are indexed in reputable journal databases such as IEEE Xplore, Scopus, Springerlink, and ScienceDirect."
     );
@@ -146,7 +147,8 @@
     }
     }
     typewriterdua();
-
+</script>
+<script type="text/javascript">
     var Flipper = (function () {
     var card = $(".card");
     var flipper = card.find(".card__flipper");
@@ -200,9 +202,9 @@
     card.css({ "z-index": "1" }).removeClass("active");
     flipper
     .css({
-    transform: "none",
-    "-webkit-transform": "none",
-    "-ms-transform": "none"
+    transform: "nassets/frontend/one",
+    "-webkit-transform": "nassets/frontend/one",
+    "-ms-transform": "nassets/frontend/one"
     })
     .removeClass("active");
     };
@@ -220,7 +222,8 @@
     init: init
     };
     })();
-
+</script>
+<script type="text/javascript">
     Flipper.init();
     var vid = document.getElementById("myVideo");
     function setPlaySpeed() { 
@@ -252,7 +255,7 @@
     }
     }
     prototype.displaySlide = function (slide, show) {
-    slide && (slide.style.display = show ? 'block' : 'none');
+    slide && (slide.style.display = show ? 'block' : 'nassets/frontend/one');
     }
     prototype.gotoSlide = function (index) {
     var slideToShow = this.slideElements[index];
@@ -290,28 +293,28 @@
     slideSelector: '.slides'
     })
 </script>
-<script src="<?= base_url('one/assets/js/vendor/modernizr-3.5.0.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/vendor/jquery-1.12.4.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/popper.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/bootstrap.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.slicknav.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/owl.carousel.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/slick.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/wow.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/animated.headline.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.magnific-popup.js');?>"></script>
-<script src="<?= base_url('one/assets/js/gijgo.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.nice-select.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.sticky.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.counterup.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/waypoints.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.countdown.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/contact.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.form.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.validate.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/mail-script.js');?>"></script>
-<script src="<?= base_url('one/assets/js/jquery.ajaxchimp.min.js');?>"></script>
-<script src="<?= base_url('one/assets/js/plugins.js');?>"></script>
-<script src="<?= base_url('one/assets/js/main.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/vendor/modernizr-3.5.0.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/vendor/jquery-1.12.4.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/popper.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/bootstrap.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.slicknav.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/owl.carousel.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/slick.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/wow.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/animated.headline.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.magnific-popup.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/gijgo.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.nice-select.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.sticky.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.counterup.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/waypoints.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.countdown.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/contact.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.form.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.validate.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/mail-script.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/jquery.ajaxchimp.min.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/plugins.js');?>"></script>
+<script src="<?= base_url('assets/frontend/one/assets/js/main.js');?>"></script>
 </body>
 </html>

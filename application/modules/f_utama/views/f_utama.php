@@ -90,8 +90,8 @@
                 </div>
               </div>
               <div class="col-lg-5">
-                <img src="assets/img/hero/01-ok.png" class="slides lingkaran-kep">
-                <img src="assets/img/hero/02-ok.png" class="slides lingkaran-kep">
+                <img src="<?= base_url('assets/frontend/one/assets/img/hero/01-ok.png');?>" class="slides lingkaran-kep">
+                <img src="<?= base_url('assets/frontend/one/assets/img/hero/02-ok.png');?>" class="slides lingkaran-kep">
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard1" class="more" aria-hidden="true">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/8432.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/8432.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>OM-SPAN</h2>
                   <label for="kadecard1" class="button" aria-hidden="true">
@@ -161,7 +161,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard22" class="more">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/8432.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/8432.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>P.O.K</h2>
                   <label for="kadecard22" class="button" aria-hidden="true">
@@ -204,7 +204,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard222" class="more">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/8432.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/8432.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>S.A.S</h2>
                   <label for="kadecard222" class="button" aria-hidden="true">
@@ -247,7 +247,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard2" class="more">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/4012581.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/4012581.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>DATA DOSEN</h2>
                   <label for="kadecard2" class="button" aria-hidden="true">
@@ -297,7 +297,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard3" class="more">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/4027794.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/4027794.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>DATA PRAJA</h2>
                   <label for="kadecard3" class="button" aria-hidden="true">
@@ -340,7 +340,7 @@
           <div class="kadecard">
             <input type="checkbox" id="kadecard4" class="more">
             <div class="content">
-              <div class="front" style="background-image: url('assets/img/gallery/bg/4379.jpg');border-radius: 0px 90px 0px 90px;">
+              <div class="front" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/bg/4379.jpg');?>');border-radius: 0px 90px 0px 90px;">
                 <div class="inner">
                   <h2>DATA KEPEGAWAIAN</h2>
                   <label for="kadecard4" class="button" aria-hidden="true">
@@ -405,10 +405,10 @@
         <div class="col-lg-6 col-md-12">
           <div class="about-img ">
             <div class="about-font-img d-none d-lg-block">
-              <img src="assets/img/gallery/about2.png" alt="">
+              <img src="<?= base_url('assets/frontend/one/assets/img/gallery/about2.png');?>" alt="">
             </div>
             <div class="about-back-img ">
-              <img src="assets/img/gallery/about1.png" alt="">
+              <img src="<?= base_url('assets/frontend/one/assets/img/gallery/about1.png');?>" alt="">
             </div>
           </div>
         </div>
@@ -416,7 +416,7 @@
     </div>
   </div>
   <!-- 5 -->
-  <div class="gallery-area section-padding30" style="background-image: url('assets/img/gallery/department.png');background-repeat: no-repeat;background-position: center center;background-size: cover;">
+  <div class="gallery-area section-padding30" style="background-image: url('<?= base_url('assets/frontend/one/assets/img/gallery/department.png');?>');background-repeat: no-repeat;background-position: center center;background-size: cover;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
@@ -433,17 +433,17 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="single-gallery mb-30">
-                <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/01.jpeg);"></div>
+                <div class="gallery-img big-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/01.jpeg');?>);"></div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/02.jpeg);"></div>
+                <div class="gallery-img small-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/02.jpeg');?>);"></div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/03.jpeg);"></div>
+                <div class="gallery-img small-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/03.jpeg');?>);"></div>
               </div>
             </div>
           </div>
@@ -452,17 +452,17 @@
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/04.jpeg);"></div>
+                <div class="gallery-img small-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/04.jpeg');?>);"></div>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="single-gallery mb-30">
-                <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/05.jpeg);"></div>
+                <div class="gallery-img small-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/05.jpeg');?>);"></div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="single-gallery mb-30">
-                <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/06.jpeg);"></div>
+                <div class="gallery-img big-img" style="background-image: url(<?= base_url('assets/frontend/one/assets/img/gallery/06.jpeg');?>);"></div>
               </div>
             </div>
           </div>
@@ -488,7 +488,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single-blogs mb-30">
             <div class="blog-img">
-              <img src="assets/img/gallery/blog1.png" alt="">
+              <img src="<?= base_url('assets/frontend/one/assets/img/gallery/blog1.png');?>" alt="">
             </div>
             <div class="blogs-cap">
               <div class="date-info">
@@ -503,7 +503,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single-blogs mb-30">
             <div class="blog-img">
-              <img src="assets/img/gallery/blog2.png" alt="">
+              <img src="<?= base_url('assets/frontend/one/assets/img/gallery/blog2.png');?>" alt="">
             </div>
             <div class="blogs-cap">
               <div class="date-info">
@@ -518,7 +518,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="single-blogs mb-30">
             <div class="blog-img">
-              <img src="assets/img/gallery/blog3.png" alt="">
+              <img src="<?= base_url('assets/frontend/one/assets/img/gallery/blog3.png');?>" alt="">
             </div>
             <div class="blogs-cap">
               <div class="date-info">

@@ -6,7 +6,7 @@
           <!-- Logo -->
           <div class="col-xl-2 col-lg-2 col-md-1">
             <div class="logo">
-              <a href="<?= base_url('f_loader'); ?>"><img src="<?= base_url('one/assets/img/logo/logo.png');?>" class="lingkaran-logo" alt=""></a>
+              <a href="<?= base_url('f_loader'); ?>"><img src="<?= base_url('assets/frontend/one/assets/img/logo/logo.png');?>" class="lingkaran-logo" alt=""></a>
             </div>
           </div>
           <div class="col-xl-10 col-lg-10 col-md-10">
