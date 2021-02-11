@@ -14,11 +14,11 @@ class F_Utama extends CI_Controller {
         // $data = $this->f_utama_model->get_data();
         // $x['data'] = $data[0];
 
-        $this->load->view("frontend/b-head");
-        $this->load->view("frontend/b-top-header");
+        $this->load->view("frontend/a-head");
+        $this->load->view("frontend/a-top-header");
         $this->load->view('f_utama');
         // $this->load->view('utama', $x);
-        $this->load->view("frontend/b-footer");
+        $this->load->view("frontend/a-footer");
     }
 }
 ?>

@@ -4,10 +4,27 @@ class F_Loader extends CI_Controller {
 
     public function index()
 	{
-        $this->load->view("frontend/a-head");
-        $this->load->view("frontend/a-top-header");
         $this->load->view('loader_utama');
-        $this->load->view("frontend/a-footer");
+    }
+
+    public function indexkeuangan()
+	{
+        $this->load->view('loader_keuangan');
+    }
+
+    public function indexdosen()
+	{
+        $this->load->view('loader_dosen');
+    }
+
+    public function indexpraja()
+	{
+        $this->load->view('loader_praja');
+    }
+
+    public function indexkepegawaian()
+	{
+        $this->load->view('loader_kepegawaian');
     }
 }
 ?>
