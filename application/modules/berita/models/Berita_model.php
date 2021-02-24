@@ -14,6 +14,11 @@ class Berita_model extends CI_Model{
 		return $query->result();
     }
 
+    
+    public function log($log){
+        return $this->db->insert('tbl_log', $log);
+    }
+
     public function tambah_berita($input_data){
         return $this->db->insert('berita', $input_data);
     }

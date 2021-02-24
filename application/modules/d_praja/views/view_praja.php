@@ -33,7 +33,7 @@
       <div class="panel panel-inverse">
         <div class="panel-heading">
           <h4 class="panel-title">
-              <span><a href="<?php echo base_url('d_praja/editstatus');?>" class="btn btn-sm btn-warning"> STATUS PRAJA</a></span>
+            <span><a href="<?php echo base_url('d_praja/editstatus');?>" class="btn btn-sm btn-warning"> STATUS PRAJA</a></span>
             <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i></button> -->
             <!-- <a href="" class="btn btn-icon btn-sm btn-inverse" data-toggle="modal" data-target="#addpeg"><i class="fa fa-plus-square"></i></a> -->
           </h4>
@@ -56,143 +56,101 @@
           
           <br>
           <div class="col-xl-2">
+
             <label for="basic-url">Angkatan  : </label>
-            <input class="form-control" list="angkatann" name="angkatan" id="angkatannn">
+
+            <input class="form-control" list="angkatann" >
             <datalist id="angkatann">
              <?php foreach (json_decode($angkatan, true) as $x) : ?>
 
-               <option value="<?php echo $x['angkatan'] ?>">
+               <option value="<?php echo $x['angkatan'] ?>"></option>
 
 
-               <?php endforeach; ?>
-             </datalist>
-             <br>
-           </div>
-           
+
+             <?php endforeach; ?>
+
+           </datalist>
+
+           <br>
+           <button type="button" data-id="5" id="export" class="btn btn-info">Export Data</button>
 
 
-           <div class="panel-body">
-             <div class ="table-responsive">
-              <table id="data-praja" class="table table-striped table-bordered table-td-valign-middle" width="100%">
-                <!-- <button href='#' class='btn btn-sm btn-warning' btn-sm><i class='fa fa-edit'></i></button> -->
-                <thead>
-                  <tr>
-                   <th class="text-nowrap"> no </th>
-                    <th class="text-nowrap">opsi</th>
-                    <th class="text-nowrap">npp</th>
-                    <th class="text-nowrap"> nama </th>
-                    <th class="text-nowrap"> jk </th>
-                    <th class="text-nowrap"> nisn</th>
-                    <th class="text-nowrap"> no_spcp </th>
-                    <th class="text-nowrap"> npwp</th>
-                    <th class="text-nowrap"> nik_praja </th>
-                    <th class="text-nowrap"> tmpt_lahir </th>
-                    <th class="text-nowrap"> tgl_lahir </th>
-                    <th class="text-nowrap"> agama </th>
-                    <th class="text-nowrap"> alamat </th>
-                    <th class="text-nowrap"> rt </th>
-                    <th class="text-nowrap"> rw </th>
-                    <th class="text-nowrap"> nama_dusun </th>
-                    <th class="text-nowrap"> kelurahan </th>
-                    <th class="text-nowrap"> kecamatan </th>
-                    <th class="text-nowrap"> kode_pos </th>
-                    <th class="text-nowrap"> kab_kota </th>
-                    <th class="text-nowrap"> provinsi </th>
-                    <th class="text-nowrap"> jenis_tinggal </th>
-                    <th class="text-nowrap"> alat_transport </th>
-                    <th class="text-nowrap"> tlp_rumah </th>
-                    <th class="text-nowrap"> tlp_pribadi </th>
-                    <th class="text-nowrap"> email </th>
-                    <th class="text-nowrap"> kewarganegaraan </th>
-                    <th class="text-nowrap"> penerima_pks </th>
-                    <th class="text-nowrap"> no_pks </th>
-                    <th class="text-nowrap"> prodi </th>
-                    <th class="text-nowrap"> jenis_pendaftaran </th>
-                    <th class="text-nowrap"> tgl_masuk_kuliah </th>
-                    <th class="text-nowrap"> tahun_masuk_kuliah </th>
-                    <th class="text-nowrap"> pembiayaan </th>
-                    <th class="text-nowrap"> jalur_masuk </th>
-                    <th class="text-nowrap"> tingkat </th>
-                    <th class="text-nowrap"> angkatan </th>
-                    <th class="text-nowrap"> status </th>
-                    <th class="text-nowrap"> fakultas </th>
-                    <th class="text-nowrap"> id_ortu </th>
-                    <th class="text-nowrap"> nik_ayah </th>
-                    <th class="text-nowrap"> nama_ayah </th>
-                    <th class="text-nowrap"> tgllahir_ayah </th>
-                    <th class="text-nowrap"> pendidikan_ayah </th>
-                    <th class="text-nowrap"> pekerjaan_ayah </th>
-                    <th class="text-nowrap"> penghasilan_ayah </th>
-                    <th class="text-nowrap"> tlp_ayah </th>
-                    <th class="text-nowrap"> nik_ibu </th>
-                    <th class="text-nowrap"> nama_ibu </th>
-                    <th class="text-nowrap"> tgllahir_ibu </th>
-                    <th class="text-nowrap"> pendidikan_ibu </th>
-                    <th class="text-nowrap"> pekerjaan_ibu </th>
-                    <th class="text-nowrap"> penghasilan_ibu </th>
-                    <th class="text-nowrap"> id_wali </th>
-                    <th class="text-nowrap"> nik_wali </th>
-                    <th class="text-nowrap"> nama_wali </th>
-                    <th class="text-nowrap"> tgllahir_wali </th>
-                    <th class="text-nowrap"> pendidikan_wali </th>
-                    <th class="text-nowrap"> pekerjaan_wali </th>
-                    <th class="text-nowrap"> penghasilan_wali </th>
-                    <th class="text-nowrap"> tlp_wali </th>
-                  </tr>
-                </thead>
+           <br>
+         </div>
 
-              </table>
-            </div>
+
+
+         <div class="panel-body">
+           <div class ="table-responsive">
+            <table id="data-praja" class="table table-striped table-bordered table-td-valign-middle" width="100%">
+              <!-- <button href='#' class='btn btn-sm btn-warning' btn-sm><i class='fa fa-edit'></i></button> -->
+              <thead>
+                <tr>
+                 <th class="text-nowrap">NO </th>
+                 <th class="text-nowrap">NPP</th>
+                 <th class="text-nowrap">NAMA</th>
+                 <th class="text-nowrap">JENIS KELAMIN </th>
+                 <th class="text-nowrap">STATUS </th>
+                 <th class="text-nowrap">TINGKAT</th>
+                 <th class="text-nowrap">ANGKATAN </th>
+                 <th class="text-nowrap">OPSI </th>
+                 
+               </tr>
+             </thead>
+
+           </table>
+         </div>
+       </div>
+     </div>
+     <!-- end panel-body -->
+   </div>
+   <!-- end panel -->
+ </div>
+ <!-- end col-10 -->
+
+
+
+ <!-- Modal Ubah -->
+ <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="show-data" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Data Praja</h4>
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+
+      </div>
+      <form class="form-horizontal" action="" method="post" enctype="multipart/form-data" role="form">
+       <div class="modal-body">
+         <div class="form-group">
+           <div class="row">
+            <div class="col-xl">
+             <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Data Praja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ortu" role="tab" data-toggle="tab">Data Orang Tua</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#wali" role="tab" data-toggle="tab">Data Wali</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#lain" role="tab" data-toggle="tab">Data Lain-lain</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- end panel-body -->
-      </div>
-      <!-- end panel -->
-    </div>
-    <!-- end col-10 -->
 
+        <!-- Tab panes -->
 
+        <div class="tab-content">
+         <div role="tabpanel" class="tab-pane fade active show" id="profile">
 
-    <!-- Modal Ubah -->
-    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="show-data" class="modal fade">
-      <div class="modal-dialog" style="max-width: 30%;">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Data Praja</h4>
-            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-
-          </div>
-          <form class="form-horizontal" action="" method="post" enctype="multipart/form-data" role="form">
-           <div class="modal-body">
-             <div class="form-group">
-               <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Data Praja</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#ortu" role="tab" data-toggle="tab">Data Orang Tua</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#wali" role="tab" data-toggle="tab">Data Wali</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#lain" role="tab" data-toggle="tab">Data Lain-lain</a>
-                </li>
-              </ul>
-
-              <!-- Tab panes -->
-
-              <div class="tab-content">
-               <div role="tabpanel" class="tab-pane fade active show" id="profile">
-                <table class="table table-striped">
-               <!--  <div role="tabpanel" class="tab-pane fade active show" id="profile">
-
-                <table class="table table-striped"> -->
+          <table class="table table-striped" cellspacing="0" align="center">
                   <tbody>
                     <tr>
-
                       <td>NPP</td>
-                      <td><input type="text" readonly class="form-control-plaintext" id="npp" style="height:10px; "></td>
+                      <td><input type="text" readonly class="form-control-plaintext" id="npp"  style="height:10px;"></td>
                     </tr>
                     <tr>
                       <td>NAMA PRAJA</td>
@@ -521,6 +479,19 @@
           "dataSrc": ""
         }
       });
+
+
+
+    $('#export').on('click', function() {
+
+      var id=$(this).attr("data-id");
+      $.ajax({
+        success: function(dataResult){
+          window.open("<?php echo base_url('d_praja').'/export/'; ?>"+ val);
+        }
+      });
+
+    });
 
 
     break;

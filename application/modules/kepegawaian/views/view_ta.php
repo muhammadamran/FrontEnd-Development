@@ -9,7 +9,7 @@
       <div class="panel panel-inverse">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Kepegawaian'){?>
+            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Kepegawaian'){?>
             <a href="" class="btn btn-icon btn-sm btn-inverse" data-toggle="modal" data-target="#addta"><i class="fa fa-plus-square"></i></a>
             <?php } ?>
           </h4>
@@ -20,7 +20,7 @@
             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
           </div>
         </div>
-        <?php if($this->session->userdata('role') == 'Admin'){?>
+        <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin'){?>
         <div class="alert alert-warning fade show">
           <button type="button" class="close" data-dismiss="alert">
           <span aria-hidden="true">&times;</span>
@@ -62,7 +62,7 @@
                             <td><?= date('d/m/Y', strtotime($row->tanggal_lahir)) == NULL ? "<i><font style='color:red;'>Not Found</font></i>" : date('d/m/Y', strtotime($row->tanggal_lahir)) ?></td>
                             <td><?= $row->dik == NULL ? "<i><font style='color:red;'>Not Found</font></i>" : $row->dik ?></td>
                             <td><?= $row->penugasan == NULL ? "<i><font style='color:red;'>Not Found</font></i>" : $row->penugasan ?></td>
-                            <?php if($this->session->userdata('role') == 'Admin'){?>
+                            <?php if($this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Admin'){?>
                             <td>
                                 <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editta<?php echo $row->nik;?>"><i class="fa fas fa-edit"></i></a>
                                 <a href="#" class="btn btn-sm btn-danger" style="color:#fff;cursor:pointer" data-toggle="modal" data-target="#hapusta<?php echo $row->nik;?>"><i class="fa fas fa-trash"></i></a>

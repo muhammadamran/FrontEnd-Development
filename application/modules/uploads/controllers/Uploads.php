@@ -273,6 +273,11 @@ class Uploads extends CI_Controller {
 			}
 			
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD SPAN";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+			
 			$this->session->set_flashdata('span', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 
 			redirect("uploads/v_span"); 
@@ -382,6 +387,12 @@ class Uploads extends CI_Controller {
 		$this->db->truncate('tbl_span_rank');
 		$this->db->insert_batch('tbl_span_rank', $data);
 		//upload success
+		
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SATKER SPAN";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+
 		$this->session->set_flashdata('satker', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data berhasil diimport!</div>');
 		//redirect halaman
 		redirect("uploads/v_span");
@@ -471,6 +482,12 @@ class Uploads extends CI_Controller {
 		$this->db->truncate('tbl_span_rank');
 		$this->db->insert_batch('tbl_span_rank', $biroo);
 		//upload success
+		
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SATKER SPAN BIRO";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('belanja', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data berhasil diimport!</div>');
 		//redirect halaman
 		redirect("uploads/v_span");
@@ -719,6 +736,11 @@ class Uploads extends CI_Controller {
 			$this->db->insert_batch('out_pok', $data_out);  // PENTING
 			// exit;
 			// //upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD POK";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('pok', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect("uploads/v_pok");
@@ -833,6 +855,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS JATINANGOR";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_jatinangor', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_jatinangor']['name'].' berhasil diimport!</div>');
 		//redirect halaman
 		redirect("uploads/v_sarpras/jatinangor");
@@ -928,6 +955,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS PAPUA";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+
 		$this->session->set_flashdata('sarpras_papua', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_papua']['name'].' berhasil diimport!</div>');
 		//redirect halaman
 		redirect("uploads/v_sarpras/papua");
@@ -1072,6 +1104,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS SULSEL";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_sulsel', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_sulsel']['name'].' berhasil diimport!</div>');
 		//redirect halaman
 		redirect("uploads/v_sarpras/sulsel"); 
@@ -1222,6 +1259,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS NTB";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_ntb', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_ntb']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_sarpras/ntb");
@@ -1371,6 +1413,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS SULUT";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_sulut', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_sulut']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_sarpras/sulut");
@@ -1500,6 +1547,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS JAKARTA";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_jakarta', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_jakarta']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_sarpras/jakarta");
@@ -1691,6 +1743,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS KALBAR";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_kalbar', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_kalbar']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_sarpras/kalbar");
@@ -1825,6 +1882,11 @@ class Uploads extends CI_Controller {
 		}
 
 		//upload success
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD SARPRAS SUMBAR";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+		
 		$this->session->set_flashdata('sarpras_sumbar', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['sarpras_sumbar']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_sarpras/sumbar");
@@ -2115,6 +2177,11 @@ class Uploads extends CI_Controller {
 			$this->uploads_model->upsert_batch($data_span, 'tbl_spanint', $newDate);
 			// exit;
 			// //upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD RANK";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('rank', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect("uploads/v_rank");
@@ -2251,12 +2318,354 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD PAGU";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifpagu', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
 
 		}
 	}
+
+	public function uploadSASjatinangor()
+	{
+		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		if(isset($_FILES['pagu']['name']) && in_array($_FILES['pagu']['type'], $file_mimes)) {
+			// var_dump($file_mimes);exit();
+
+			$arr_file = explode('.', $_FILES['pagu']['name']);
+			$extension = end($arr_file);
+			// var_dump($extension);exit;
+
+			if($extension != 'xlsx') {
+				$this->session->set_flashdata('notifpagu', '<div class="alert alert-danger"><b>PROSES IMPORT DATA GAGAL!</b> Format file yang anda masukkan salah!</div>');
+
+				redirect("uploads/v_sas"); 
+			} else {
+				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+			}
+
+			$loadexcel  = $reader->load($_FILES['pagu']['tmp_name']);
+			// var_dump($reader->load($_FILES['pagu']['tmp_name']));exit;
+
+
+			$sheet  = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
+
+
+			$dataoutput = array();
+			$datasuboutput = array();
+			$datakegiatan = array();
+			$datakomponen = array();
+			$datasubkomponen = array();
+			$dataakun = array();
+			$numrow = 1;
+			$dkomponen = 0;
+			$dsubkomponen = 0;
+			$dsubkomponen = 0;
+			$dakun = 0;
+			
+			$satker_jatinangor = 448302;
+			$tgl = date('Y-m-d');
+
+
+			// $this->db->where('kode_satker', $satker_jatinangor);
+			// $this->db->delete('unit_sas');
+
+			// $this->db->where('kode_satker', $satker_jatinangor);
+			// $this->db->delete('output_sas');
+
+
+			foreach($sheet as $row){
+				if($numrow > 1){
+					if ($row['A'] == 2){
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id_b = $ex[0];
+						$keterangan = substr($ket, 5);
+
+						array_push($datakegiatan, array(
+							'id_b'      => $id_b,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $keterangan
+						));
+						
+
+					} elseif ($row['A'] == 3) {
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id_c = $ex[0];
+						// var_dump($id_c);exit;
+						$keterangan = substr($ket, 9);
+
+						array_push($dataoutput, array(
+							'id_b'      => $id_b,
+							'id_c'      => $id_c,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $keterangan
+						));
+						
+						
+
+					} elseif ($row['A'] ==4) {
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id = $ex[0];
+
+						$id_d = $id_c.".".$id;
+						
+						$keterangan = substr($ket, 4);
+						// var_dump($keterangan);exit;
+						array_push($datasuboutput, array(
+							'id_b'      => $id_b,
+							'id_c'      => $id_c,
+							'id_d'      => $id_d,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $keterangan
+						));
+						// print("<pre>".print_r($datasuboutput,true)."</pre>");
+						// exit();
+
+					} elseif ($row['A'] == 5) {
+						$dkomponen++;
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id = $ex[0];
+
+						$ex1 = explode('.', $id_c);
+						$id1 = $ex1[1];
+
+						$id_e = "komp".".".$id1."."."0".$dkomponen;
+						// var_dump($id_e);exit;
+						
+						$keterangan = substr($ket, 4);
+						// var_dump($keterangan);exit;
+						array_push($datakomponen, array(
+							'id_b'      => $id_b,
+							'id_c'      => $id_c,
+							'id_d'      => $id_d,
+							'id_e'      => $id_e,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $keterangan
+						));
+
+
+					} elseif ($row['A'] == 6) {
+						$dsubkomponen++;
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id = $ex[0];
+
+						$ex1 = explode('.', $id_c);
+						$id1 = $ex1[1];
+
+						$id_f = "subkomp".".".$id1."."."0".$dsubkomponen;
+						
+						
+						$keterangan = substr($ket, 4);
+						// var_dump($keterangan);exit;
+						array_push($datasubkomponen, array(
+							'id_b'      => $id_b,
+							'id_c'      => $id_c,
+							'id_d'      => $id_d,
+							'id_e'      => $id_e,
+							'id_f'      => $id_f,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $keterangan
+						));
+						// print("<pre>".print_r($datasubkomponen,true)."</pre>");
+						// exit();
+
+					} elseif ($row['A'] == 7) {
+						$dakun++;
+						$ket = trim($row['AI']);
+						$ex = explode(' ', $ket);
+						$id = $ex[0];
+
+						$ex1 = explode('.', $id_c);
+						$id1 = $ex1[1];
+
+						$id_g = "akun".".".$id1."."."0".$dakun;
+
+						array_push($dataakun, array(
+							'id_b'      => $id_b,
+							'id_c'      => $id_c,
+							'id_d'      => $id_d,
+							'id_e'      => $id_e,
+							'id_f'      => $id_f,
+							'id_g'      => $id_g,
+							'satker'      =>$satker_jatinangor,
+							'ket'      => $ket,
+							'pagu' => preg_replace("/[^0-9]/", "", $row['AB']),
+							'realisasi' =>preg_replace("/[^0-9]/", "", $row['AC']),
+							'tgl' =>$tgl
+						));
+						
+					}
+				}
+				$numrow++;
+			}
+			// echo "<br>";
+			// var_dump($data);
+
+			// echo "</pre>";
+			// exit();
+			// print("<pre>".print_r($dataakun,true)."</pre>");
+			// exit();
+
+			$this->db->truncate('kegiatan_sas');
+			$this->db->insert_batch('kegiatan_sas', $datakegiatan);
+			$this->db->truncate('outputnya_sas');
+			$this->db->insert_batch('outputnya_sas', $dataoutput);
+			$this->db->truncate('suboutput_sas');
+			$this->db->insert_batch('suboutput_sas', $datasuboutput);
+			$this->db->truncate('komponen_sas');
+			$this->db->insert_batch('komponen_sas', $datakomponen);
+			$this->db->truncate('subkomponen_sas');
+			$this->db->insert_batch('subkomponen_sas', $datasubkomponen);
+			$this->db->truncate('akun_sas');
+			$this->db->insert_batch('akun_sas', $dataakun);
+			//delete file from server
+			// unlink(realpath('excel/'.$data_upload['file_name']));
+
+			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD SAS JATINANGOR";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
+			$this->session->set_flashdata('notifpagu', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
+			//redirect halaman
+			redirect('uploads/v_sas');
+
+		}
+	}
+
+	public function uploadSASjakarta()
+	{
+		// Load plugin PHPExcel nya
+		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		if(isset($_FILES['jakarta']['name']) && in_array($_FILES['jakarta']['type'], $file_mimes)) {
+
+			$arr_file = explode('.', $_FILES['jakarta']['name']);
+			$extension = end($arr_file);
+
+			if($extension != 'xlsx') {
+				$this->session->set_flashdata('jakarta', '<div class="alert alert-success"><b>PROSES IMPORT DATA GAGAL!</b> Format file yang anda masukkan salah!</div>');
+
+				redirect("uploads/v_sas"); 
+			} else {
+				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+			}
+
+			$loadexcel  = $reader->load($_FILES['jakarta']['tmp_name']);
+			$sheet  = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
+
+			$dataoutput = array();
+			$datasuboutput = array();
+			$datakegiatan = array();
+			$datakomponen = array();
+			$datasubkomponen = array();
+			$dataakun = array();
+			$numrow = 1;
+			$cbiro = 1;
+			$cunit = 0;
+			$satker_jakarta = 352593;
+			$tgl = date('Y-m-d');
+			$regex = '/^[0-9]{4}\.[0-9]{3}$/';
+
+
+			// $this->db->where('kode_satker', $satker_sulsel);
+			// $this->db->delete('unit_sas');
+
+			// $this->db->where('kode_satker', $satker_sulsel);
+			// $this->db->delete('output_sas');
+
+
+			// foreach($sheet as $row){
+			// 	if($numrow > 1){
+			// 		$ket = trim($row['AI']);
+			// 		$ket1 = explode(' ', $ket);
+			// 		$carikode = $ket1[0];
+			// 		// var_dump($kode);exit();
+
+			// 		if(strlen($carikode) == 4){
+			// 			$keterangann = trim($row['AI']);
+			// 			$kodennya = explode(' ', $keterangann);
+			// 			$makakodenya = $kodennya[0];
+
+			// 			$keterangan = substr($keterangann, 5);
+			// 			$kodenya = explode(' ', $keterangan);
+			// 			$kode = $kodenya[0];
+
+
+
+
+			// 			$id_b = "kegiatan".".".$makakodenya;
+
+			// 			array_push($datakegiatan, array(
+			// 				'id_b'      => $id_b,
+			// 				'satker'      =>$satker_jakarta,
+			// 				'ket'      => $keterangan
+			// 			));
+
+
+			// 		}elseif (){
+			// 			$keterangann = trim($row['AI']);
+			// 			$ket1 = explode(' ', $ket);
+			// 			$ket1 = $ket1[0];
+			// 			$id_c = "output".".".$makakodenya.".".$ket1;
+			// 			// var_dump($id_c);exit();
+
+			// 			array_push($dataoutput, array(
+			// 				'id_b'      => $id_b,
+			// 				'id_c'      => $id_c,
+			// 				'satker'      =>$satker_jakarta,
+			// 				'ket'      => $keterangan
+			// 			));
+			// 			// print("<pre>".print_r($dataoutput,true)."</pre>");
+			// 			// exit();
+
+			// 		}elseif ((strlen($carikode) == 3) && (strpos($carikode, "00") === 0)){
+			// 			$keterangann = trim($row['AI']);
+			// 			$ket1 = explode(' ', $ket);
+			// 			$ket1 = $ket1[0];
+			// 			$id_c = "output".".".$makakodenya.".".$ket1;
+			// 			// var_dump($id_c);exit();
+
+			// 			array_push($dataoutput, array(
+			// 				'id_b'      => $id_b,
+			// 				'id_c'      => $id_c,
+			// 				'satker'      =>$satker_jakarta,
+			// 				'ket'      => $keterangan
+			// 			));
+
+
+
+			// 		}
+			// 		$numrow++;
+			// 	}
+
+			// $this->db->truncate('unit');
+			// $this->db->insert_batch('output', $dataoutput);
+			//delete file from server
+			// unlink(realpath('excel/'.$data_upload['file_name']));
+
+			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI SULSEL";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
+			$this->session->set_flashdata('jakarta', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
+			//redirect halaman
+			redirect('uploads/v_sas');
+		}
+	}
+
+
 
 	public function uploadRealisasiSulsel()
 	{
@@ -2286,68 +2695,22 @@ class Uploads extends CI_Controller {
 			$tgl = date('Y-m-d');
 
 
-			$this->db->where('kode_satker', $satker_sulsel);
-			$this->db->delete('unit_sas');
+			// $this->db->where('kode_satker', $satker_sulsel);
+			// $this->db->delete('unit_sas');
 
-			$this->db->where('kode_satker', $satker_sulsel);
-			$this->db->delete('output_sas');
+			// $this->db->where('kode_satker', $satker_sulsel);
+			// $this->db->delete('output_sas');
 
 
 			foreach($sheet as $row){
 				if($numrow > 7){
-					$ket1 = trim($row['A']);
-					// echo "$ket1<br>";
-					$ket = substr($ket1, 9);
-					$temp = explode(" ", $ket1);
-					$regex = '/^[0-9]{4}\.[0-9]{3}$/';
-					if (preg_match($regex, $temp[0])) {
-						$cunit++;
-						$satker_biro = explode(".", $temp[0]);
 
-						$id_c = ($cunit<10)?$cbiro."0".$cunit:$cbiro.$cunit;
+					if(strlen($kode) == 4){
+						$keterangan = trim($row['AI']);
+						// var_dump($keterangan);exit();
 
-						$unitsulsel = array();
-						array_push($unitsulsel, array(
-							'kode_satker'      => $satker_sulsel,
-							'id_c'      => $id_c,
-							'id_b'      => $satker_biro[0],
-							'ket'      => $ket,
-							'tanggal' => $tgl
-						));
-						// exit;
-						$this->db->insert_batch('unit_sas', $unitsulsel);
-
-					}elseif((strlen($temp[0]) == 3) && (strpos($temp[0], "00") === 0)){
-						$ket1 = trim($row['A']);
-						$ket1 = substr($ket1, 4);
-					   // echo "$ket1<br>";
-
-						$pagu = $row['B'];
-					   // echo "pagunya"."$pagu";
-						$realisasi = $row['C'];
-					   // echo "realisasi"."$realisasi";
-					   // echo $row['A']."<br>" ;
-
-						
-
-						$outputsulsel = array();
-						array_push($outputsulsel, array(
-							'kode_satker' => $satker_sulsel,
-							'id_b'      => $satker_biro[0],
-							'id_c'      => $id_c,
-							'pagu'      => preg_replace("/[^0-9]/", "", $row['B']),
-							'realisasi' => preg_replace("/[^0-9]/", "", $row['C']),
-							'ket'      => $ket1,
-							'tanggal' => $tgl
-						));
-						// exit;
-						$this->db->insert_batch('output_sas', $outputsulsel);
-
-					   // $sql2 = "INSERT INTO output_sas values (NULL,".$satker_sulsel.",".$satker_biro[0].",".$id_c.",".preg_replace("/[^0-9]/", "", $row['B']).",".preg_replace("/[^0-9]/", "", $row['C']).",'".$ket1."') ";
-					   // echo "$sql2";
-					   // echo "<br>";
-					   // $this->db->query($sql2);
 					}
+
 
 
 				}
@@ -2359,6 +2722,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI SULSEL";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifsulsel', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2406,6 +2774,7 @@ class Uploads extends CI_Controller {
 					// echo "$ket<br>";
 					$temp = explode(" ", $ket1);
 					$regex = '/^[0-9]{4}\.[0-9]{3}$/';
+					// var_dump(preg_match($regex, $temp[0]));exit();
 					if (preg_match($regex, $temp[0])) {
 						$cunit++;
 						$satker_biro = explode(".", $temp[0]);
@@ -2464,6 +2833,11 @@ class Uploads extends CI_Controller {
 			unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI KALBAR";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifkalbar', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2566,6 +2940,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI NTB";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifntb', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2670,6 +3049,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI PAPUA";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifpapua', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2702,7 +3086,7 @@ class Uploads extends CI_Controller {
 			$satker_sulut = 677010;
 			$tgl = date('Y-m-d');
 
-			
+
 			$this->db->where('kode_satker', $satker_sulut);
 			$this->db->delete('unit_sas');
 
@@ -2772,6 +3156,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI SULUT";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifsulut', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2874,6 +3263,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD REALISASI SUMBAR";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('notifsumbar', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -2882,7 +3276,7 @@ class Uploads extends CI_Controller {
 
 	public function praja()
 	{
-				// Load plugin PHPExcel nya
+		// Load plugin PHPExcel nya
 		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
 
@@ -2893,7 +3287,7 @@ class Uploads extends CI_Controller {
 
 			if($extension != 'xlsx') {
 				$this->session->set_flashdata('praja', '<div class="alert alert-success"><b>PROSES IMPORT DATA GAGAL!</b> Format file yang anda masukkan salah!</div>');
-				
+
 				redirect("uploads/v_praja"); 
 			} else {
 				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
@@ -2938,7 +3332,7 @@ class Uploads extends CI_Controller {
 					}
 
 
-					
+
 					array_push($unitpraja, array(
 						'no_spcp'      => $row['A'],
 						'nama'      => $row['B'],
@@ -3029,6 +3423,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD PRAJA";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('praja', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_praja');
@@ -3048,14 +3447,14 @@ class Uploads extends CI_Controller {
 
 			if($extension != 'xlsx') {
 				$this->session->set_flashdata('prajabaru', '<div class="alert alert-success"><b>PROSES IMPORT DATA GAGAL!</b> Format file yang anda masukkan salah!</div>');
-				
+
 				redirect("uploads/v_praja"); 
 			} else {
 				$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 			}
 
 			$loadexcel  = $reader->load($_FILES['prajabaru']['tmp_name']);
-			
+
 			$namasheet = $loadexcel->getSheetNames();
 
 			// var_dump($sheetData);
@@ -3066,7 +3465,7 @@ class Uploads extends CI_Controller {
 			$stat = 'aktif';
 
 			foreach($namasheet as $shit){
-				
+
 				if (($shit == "Angkatan 28") || ($shit == "Angkatan 29") || ($shit == "Angkatan 30")) {
 					$sheetData = $loadexcel->getSheetByName($shit)->toArray(null, true, true ,true);
 					$numrow =  1;
@@ -3086,7 +3485,7 @@ class Uploads extends CI_Controller {
 								$stop = true;    
 							}
 						} else {
-							
+
 							$nullcc = 0;
 							$angka = 'XXX';
 							$jadi =1;
@@ -3145,6 +3544,11 @@ class Uploads extends CI_Controller {
 			$this->db->insert_batch('orangtua', $unitortu);
 			$this->db->insert_batch('wali', $unitwali);
 					//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD FUNCTION PRAJA BARU";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('prajabaru', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_praja');
@@ -3152,7 +3556,7 @@ class Uploads extends CI_Controller {
 		}
 	}
 
-	
+
 
 	public function thl()
 	{
@@ -3171,9 +3575,26 @@ class Uploads extends CI_Controller {
 			}
 
 			$loadexcel  = $reader->load($_FILES['thl']['tmp_name']);
-			$excel = $loadexcel->getActiveSheet();
+			$excel = $loadexcel->getSheetByName('Sheet1');
 			$rowCount = $excel->getHighestDataRow();
 			$saveData   = array();
+			$saveData2   = array();
+
+			$dataterakhir = 0;
+
+			// $cek_data = $this->uploads_model->cek_dataakhir();
+			// var_dump($cek_data);exit();
+
+			// if($cek_data != NULL){
+			// 	$dataterakhir = $cek_data[0]->id_thl;  
+			// 	// $dataterakhir = $cek_data->username;
+		 //        var_dump($dataterakhir);exit();
+			// 	// $datakahirnya = substr($dataterakhir, 9);
+			// 	// var_dump($datakahirnya);exit();   
+			// }else{
+			// 	$dataterakhir = 0;
+			// }
+
 			for ($i=7; $i<=$rowCount; $i++){
 				$nama = $excel->getCellByColumnAndRow(2, $i)->getValue();
 				$ttl = $excel->getCellByColumnAndRow(3, $i)->getValue();
@@ -3184,17 +3605,45 @@ class Uploads extends CI_Controller {
 				$dik =  $excel->getCellByColumnAndRow(4, $i)->getValue();
 				$penugasan =  $excel->getCellByColumnAndRow(5, $i)->getValue();
 				$satker =  $excel->getCellByColumnAndRow(6, $i)->getValue();
+
+				$date = $tanggal_lahir;
+				$result = date('dmY', strtotime($date));
+
+				$dataterakhir++;
+				$username = $result.$dataterakhir;
+				// var_dump($dataterakhir);
+
+
 				$data = array(
 					'nama' => $nama,
 					'tempat_lahir' => $tempat_lahir,
+					'username' => $username,
 					'tanggal_lahir' => $tanggal_lahir,
 					'dik' => $dik,
 					'penugasan' => $penugasan,
 					'nama_satker' => $satker
 				);
 				array_push($saveData, $data);
+
+				$data2 = array(
+					'nama' => $nama,
+					'username' => $username,
+					'password' => md5('123456'),
+					'level' => 'Karyawan',
+					'penugasan' =>  $penugasan
+				);
+				array_push($saveData2, $data2);
 			}
+
+			print("<pre>".print_r($data2,true)."</pre>");
 			$this->db->insert_batch('tbl_thl', $saveData);
+			$this->db->insert_batch('tbl_users_presensi', $saveData2);
+
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD THL";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('thl',"<b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!"); 
 			redirect('uploads/v_thl'); 
 		}
@@ -3388,6 +3837,12 @@ class Uploads extends CI_Controller {
 		//upload success
 		$this->db->insert_batch('tbl_pns', $data);
 		$this->db->insert_batch('tbl_pelatihan', $pelatihan);
+		
+		$log['user'] = $this->session->userdata('nip');
+		$log['Ket'] = "UPLOAD PNS";
+		$log['tanggal'] = date('Y-m-d H:i:s');
+		$this->uploads_model->log($log);
+
 		$this->session->set_flashdata('pns', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data '.$_FILES['pns']['name'].' berhasil diimport!</div>');
 			//redirect halaman
 		redirect("uploads/v_pns");
@@ -3547,6 +4002,11 @@ class Uploads extends CI_Controller {
 
 			$this->db->insert_batch('tbl_pns', $saveData);
 			$this->db->insert_batch('tbl_pelatihan', $savedDataTrain); 
+
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD PNS2";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
 
 			$this->session->set_flashdata('pns',"<b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!"); 
 			redirect('uploads/v_pns'); 
@@ -3740,6 +4200,11 @@ class Uploads extends CI_Controller {
 			// unlink(realpath('excel/'.$data_upload['file_name']));
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD FUNCTION JATINANGOR";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('nangor', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_sas');
@@ -3802,6 +4267,11 @@ class Uploads extends CI_Controller {
 			}
 			$this->db->truncate('tbl_dosen');
 			$this->db->insert_batch('tbl_dosen', $data);
+			
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD DOSEN";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
 
 			$this->session->set_flashdata('dosen', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b><br>Data berhasil diimport!</div>');
 			//redirect halaman
@@ -3879,14 +4349,13 @@ class Uploads extends CI_Controller {
 						'nip'      => $row['C'],
 						'nama'      => $row['D'],
 						'jk'      => $row['E'],
-						'npp'      => $row['F'],
-						'nip'      => $row['G'],
-						'tempat_lahir' => $yukbisa,
-						'tanggal_lahir' => $tgl,
-						'asdaf' => $row['I'],
-						'agama' => $row['K'],
-						'instansi' => $row['L'],
-						'jabatan' =>$row['M']
+						'institusi'      => $row['F'],
+						'angkatan'      => $row['G'],
+						'tahun_lulus' => $row['H'],
+						'instansi' => $row['I'],
+						'jabatan' => $row['J'],
+						'kab_kota' => $row['K'],
+						'provinsi' => $row['L']
 					));
 						// exit;
 
@@ -3899,6 +4368,11 @@ class Uploads extends CI_Controller {
 			// exit();
 
 			//upload success
+			$log['user'] = $this->session->userdata('nip');
+			$log['Ket'] = "UPLOAD ALUMNI";
+			$log['tanggal'] = date('Y-m-d H:i:s');
+			$this->uploads_model->log($log);
+
 			$this->session->set_flashdata('alumni', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
 			//redirect halaman
 			redirect('uploads/v_alumni');

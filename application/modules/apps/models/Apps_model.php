@@ -13,6 +13,10 @@ class Apps_model extends CI_Model {
         return $role;
     }
 
+    public function log($log){
+        return $this->db->insert('tbl_log', $log);
+    }
+
     function tambah_apps($input_data)
 	{   
         $add_peg = $this->db->insert('tbl_apps', $input_data);

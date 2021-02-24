@@ -44,49 +44,49 @@
           <span aria-hidden="true">&times;</span>
           </button>
           <p>Silahkan input <b>Data Pegawai</b> Pada Button icon "<i class="fa fa-plus-square"></i>"</p>
-        </div> -->
-                <div class="table-responsive">
-                    <div class="panel-body">
-                        <table id="data-table-buttons" class="table table-striped table-bordered table-td-valign-middle">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Kampus</th>
-                                    <th>Pagu</th>
-                                    <th>Realiasasi</th>
-                                    <th>Sisa Pagu</th>
-                                    <th>Persentase</th>
-                                    <th>Detail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
-                                <?php foreach (json_decode($data, true) as $x) : ?>
-                                    <tr>
-                                        <td><?php echo $no++; ?></td>
-                                        <td><?= $x['nama']; ?></td>
-                                        <td><?= number_format($x['pagu'], 0, ',', '.'); ?></td>
-                                        <td><?= number_format($x['realisasi'], 0, ',', '.'); ?></td>
-                                        <td><?= number_format($x['pagu'] - $x['realisasi'], 0, ',', '.'); ?></td>
-                                        <td><?= round((100 / $x['pagu'] * $x['realisasi']), 2) . "%"; ?></td>
-                                        <?php if (isset($x['kode_satker'])) { ?>
-                                            <td><a href="<?= base_url() . 'd_sasbaru/' . $x['kode_satker']; ?>" class='btn btn-primary mr-1'><i class='fa fa-eye'></i></a></td>
-                                        <?php } else { ?>
-                                            <td><a href="<?= base_url() . 'd_sasbaru/' . $x['id_b']; ?>" class='btn btn-primary mr-1'><i class='fa fa-eye'></i></a></td>
+      </div> -->
+      <div class="table-responsive">
+        <div class="panel-body">
+            <table id="data-table-buttons" class="table table-striped table-bordered table-td-valign-middle">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Kampus</th>
+                        <th>Pagu</th>
+                        <th>Realiasasi</th>
+                        <th>Sisa Pagu</th>
+                        <th>Persentase</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $no = 1; ?>
+                    <?php foreach (json_decode($data, true) as $x) : ?>
+                        <tr>
+                            <td><?php echo $no++; ?></td>
+                            <td><?= $x['nama']; ?></td>
+                            <td><?= number_format($x['pagu'], 0, ',', '.'); ?></td>
+                            <td><?= number_format($x['realisasi'], 0, ',', '.'); ?></td>
+                            <td><?= number_format($x['pagu'] - $x['realisasi'], 0, ',', '.'); ?></td>
+                            <td><?= round((100 / $x['pagu'] * $x['realisasi']), 2) . "%"; ?></td>
+                            <?php if (isset($x['satker']))  { ?>
+                              <td><a href="<?= base_url() . 'd_sasbaru?biro=' . $x['satker']; ?>" class='btn btn-primary mr-1'><i class='fa fa-eye'></i></a></td>
+                          <?php }else{ ?>
+                             <td>Tidak ada detail</td>
+                         <?php } ?>
 
-                                        <?php } ?>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- end panel-body -->
-            </div>
-            <!-- end panel -->
-        </div>
-        <!-- end col-10 -->
-    </div>
+                     </tr>
+                 <?php endforeach; ?>
+             </tbody>
+         </table>
+     </div>
+ </div>
+ <!-- end panel-body -->
+</div>
+<!-- end panel -->
+</div>
+<!-- end col-10 -->
+</div>
 </div>
 
 <script src="<?php echo base_url() . 'assets/js/jquery.min.js' ?>"></script>
@@ -94,17 +94,18 @@
 <script src="<?php echo base_url() . 'assets/js/morris.min.js' ?>"></script>
 
 <script>
-    Morris.Bar({
-        element: 'graph',
-        data: <?php echo $data; ?>,
-        xkey: 'alias',
-        ykeys: ['pagu', 'realisasi'],
-        labels: ['Pagu', 'Realisasi'],
-        barRatio: 0.4,
-        pointSize: 2.5,
-        resize: true,
-        parseTime: false,
-        hideHover: 'auto',
-        gridTextSize: 9
-    });
+  Morris.Bar({
+    element: 'graph',
+    data: <?php echo $data;?>,
+    xkey: 'nama',
+    ykeys: ['pagu', 'realisasi'],
+    labels: ['Pagu', 'Realisasi'],
+    barRatio: 0.4,
+    pointSize: 2.5,
+    resize: true,
+    parseTime: false,
+    hideHover: 'auto',
+    barColors: ["#9BC4CB", "#F7A9A8", "#1AB244", "#B29215"],
+    gridTextSize: 9
+  });
 </script>

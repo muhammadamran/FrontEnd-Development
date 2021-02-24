@@ -15,6 +15,8 @@
                                 <?php $date = date('Y');?>
                                 <option value="GANJIL <?php echo $date?>/<?php echo $date+1?>">GANJIL <?php echo $date?>/<?php echo $date+1?></option>
                                 <option value="GENAP <?php echo $date?>/<?php echo $date+1?>">GENAP <?php echo $date?>/<?php echo $date+1?></option>
+                                <option value="GANJIL <?php echo $date-1?>/<?php echo $date?>">GANJIL <?php echo $date-1?>/<?php echo $date?></option>
+                                <option value="GENAP <?php echo $date-1?>/<?php echo $date?>">GENAP <?php echo $date-1?>/<?php echo $date?></option>
                             </select>
                         </div>
                         <div class="col-0.5">

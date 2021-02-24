@@ -10,7 +10,7 @@
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-					<?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){?>
+					<?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){?>
 						<span><a href="" class="btn btn-sm btn-success" data-toggle="modal" data-target="#adduu">TAMBAH PERATURAN PRESIDEN</a></span>
 						<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i></button> -->
 						<!-- <a href="" class="btn btn-icon btn-sm btn-inverse" data-toggle="modal" data-target="#addpeg"><i class="fa fa-plus-square"></i></a> -->

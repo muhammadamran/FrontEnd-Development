@@ -72,6 +72,13 @@ class Berita extends CI_Controller {
             $this->session->set_flashdata('berita', 'Gagal Menambahkan berita.'); 				
             redirect('berita'); 			
         } else {
+            
+            $isi = $input_data['judul_berita'] ;
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Menambahkan Berita Internal, judul = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->berita_model->log($log);
+
             $this->session->set_flashdata('berita', 'Berhasil Menambahkan berita.'); 		
             redirect('berita'); 			
         }
@@ -117,7 +124,13 @@ class Berita extends CI_Controller {
         if (!$result) { 							
             $this->session->set_flashdata('berita', 'Gagal Mengubah berita.'); 				
             redirect('berita'); 			
-        } else {
+        } else{
+            $isi = $input_data['id_berita'];
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Mengupdate Berita Internal, id = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->berita_model->log($log);
+
             $this->session->set_flashdata('berita', 'Berhasil Mengubah berita.'); 		
             redirect('berita'); 			
         }
@@ -134,6 +147,12 @@ class Berita extends CI_Controller {
             $this->session->set_flashdata('berita', 'Draft Berita Gagal.'); 				
             redirect('berita'); 			
         } else {
+            $isi = $input_data['id_berita'];
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Mendraft kan Berita Internal, id = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->berita_model->log($log);
+
             $this->session->set_flashdata('berita', 'Draft Berita Berhasil.'); 		
             redirect('berita'); 			
         }
@@ -150,6 +169,13 @@ class Berita extends CI_Controller {
             $this->session->set_flashdata('berita', 'Publish Berita Gagal.'); 				
             redirect('berita'); 			
         } else {
+
+            $isi = $input_data['id_berita'];
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Mempublish Berita Internal, id = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->berita_model->log($log);
+
             $this->session->set_flashdata('berita', 'Publish Berita Berhasil.'); 		
             redirect('berita'); 			
         }

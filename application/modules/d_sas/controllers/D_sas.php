@@ -7,7 +7,6 @@ class D_sas extends CI_Controller
     parent::__construct();
     //load chart_model from model
     $this->load->model('d_sas_model');
-    $this->load->model('d_sas_modelbaru');
   }
 
   function index($link = NULL)
@@ -36,6 +35,7 @@ class D_sas extends CI_Controller
             // 2: biro
             // 3: bagian/unit
             $temp = explode(".", $link);
+            // var_dump($temp);exit();
             $kampus = $temp[0];
             $biro = $temp[1];
             $q = $this->d_sas_model->get_nama_kampus($kampus);

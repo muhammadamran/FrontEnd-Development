@@ -8,7 +8,7 @@
       <div class="panel panel-inverse">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Humas'){ ?>
+            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Humas'){ ?>
             <span><a href="" class="btn btn-sm btn-success" data-toggle="modal" data-target="#add">TAMBAH</a></span>
             <?php } ?>
           </h4>
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
 
-                            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Humas'){ ?>
+                            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Humas'){ ?>
                                 <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edit<?php echo $row->id_berita;?>"><i class="fa fas fa-edit"></i></a>
                                 <?php if ($row->status_berita == 'Draft'){?>
                                     <a href="#" class="btn btn-sm btn-success" style="color:#fff;cursor:pointer" data-toggle="modal" data-target="#publish<?php echo $row->id_berita;?>"><i class="fa fas fa-eye"></i></a>

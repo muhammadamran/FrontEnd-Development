@@ -48,7 +48,14 @@ class Apps extends CI_Controller {
         if (!$result) { 							
             $this->session->set_flashdata('apps', 'Aplikasi GAGAL DITAMBAHKAN.'); 				
             redirect('apps'); 			
-        } else { 								
+        } else { 				
+            
+            $isi = $input_data['nama_apps'];
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Menambahkan aplikasi, Nama Aplikasi = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->apps_model->log($log);
+
             $this->session->set_flashdata('apps', 'Aplikasi BERHASIL DITAMBAHKAN.');			
             redirect('apps'); 			
         }
@@ -68,7 +75,14 @@ class Apps extends CI_Controller {
         if (!$result) { 							
             $this->session->set_flashdata('apps', 'Aplikasi GAGAL DIUBAH.');		
             redirect('apps'); 			
-        } else { 								
+        } else { 					
+            
+            $isi = $input_data['id_apps'];
+            $log['user'] = $this->session->userdata('nip');
+            $log['Ket'] = "Mengubah aplikasi, Id Aplikasi = $isi";
+            $log['tanggal'] = date('Y-m-d H:i:s');
+            $this->apps_model->log($log);
+
             $this->session->set_flashdata('apps', 'Aplikasi BERHASIL DIUBAH.');			
             redirect('apps'); 			
         }
@@ -80,6 +94,12 @@ class Apps extends CI_Controller {
         $input_data['status'] = 3;
         
         $this->apps_model->hapus_apps($input_data);
+
+        $isi = $input_data['id_apps'];
+        $log['user'] = $this->session->userdata('nip');
+        $log['Ket'] = "Menghapus aplikasi, Id Aplikasi = $isi";
+        $log['tanggal'] = date('Y-m-d H:i:s');
+        $this->apps_model->log($log);
 
         redirect('apps');
     }

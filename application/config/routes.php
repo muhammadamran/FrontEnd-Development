@@ -77,6 +77,6 @@ $route['kemeng/matkul'] = 'kemeng/get_matkul';
 $route['kemeng/prodi'] = 'kemeng/get_prodi';
 $route['kemeng/fakultas'] = 'kemeng/get_fakultas';
 $route['kemeng/sks'] = 'kemeng/get_sks';
-
+$route['absensi/users'] = 'absensi/users';
 $route['kemeng/honor_table/(:any)'] = 'kemeng/honor_table/$1';
 

@@ -10,7 +10,7 @@
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-					<?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){?>
+					<?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){?>
 						<span><a href="" class="btn btn-sm btn-success" data-toggle="modal" data-target="#adduu">TAMBAH INTRUKSI MENTERI</a></span>
 						<?php } ?>
 						<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square"></i></button> -->
@@ -66,7 +66,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="adduuu">Tambah  Intruksi Menteri</h5>
+                    <h5 class="modal-title" id="adduuu">Tambah Instruksi Menteri</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     	<span aria-hidden="true">&times;</span>
                     </button>
@@ -119,7 +119,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                	<h5 class="modal-title">Edit Intruksi Menteri</h5>
+                	<h5 class="modal-title">Edit Instruksi Menteri</h5>
                 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     	<span aria-hidden="true">&times;</span>
                 	</button>
@@ -172,7 +172,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                	<h5 class="modal-title" id="delprokumm">Hapus Intruksi Menteri</h5>
+                	<h5 class="modal-title" id="delprokumm">Hapus Instruksi Menteri</h5>
                 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     	<span aria-hidden="true">&times;</span>
                 	</button>

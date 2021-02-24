@@ -22,7 +22,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <span><a href="<?php echo base_url('d_praja');?>" class="btn btn-sm btn-warning">Kembali</a></span>
-            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Keprajaan'){?>
+            <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Keprajaan'){?>
               <span><a href="<?php echo base_url('d_praja/ubahstatus');?>" class="btn btn-sm btn-green">UBAH STATUS PRAJA</a></span>
             <?php } ?>
 

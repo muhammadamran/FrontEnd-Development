@@ -11,7 +11,7 @@
       <div class="panel panel-inverse">
         <div class="panel-heading">
           <h4 class="panel-title">
-          <?php if($this->session->userdata('role') == 'Admin'){?>
+          <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin'){?>
             <a href="" class="btn btn-icon btn-sm btn-inverse" data-toggle="modal" data-target="#addpns"><i class="fa fa-plus-square"></i></a>
           <?php } ?>
           </h4>
@@ -22,7 +22,7 @@
             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
           </div>
         </div>
-        <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Kepegawaian'){?>
+        <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Kepegawaian'){?>
         <div class="alert alert-warning fade show">
           <button type="button" class="close" data-dismiss="alert">
           <span aria-hidden="true">&times;</span>

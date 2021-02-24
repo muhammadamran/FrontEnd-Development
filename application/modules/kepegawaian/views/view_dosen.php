@@ -9,7 +9,7 @@
       <div class="panel panel-inverse">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <?php if(($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Akademik') && $title == 'DATA DOSEN'){?>
+            <?php if(($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Akademik') && $title == 'DATA DOSEN'){?>
             <span><a href="" class="btn btn-sm btn-white" data-toggle="modal" data-target="#adddosen">TAMBAH DOSEN</a></span>
             <span><a href="<?php echo base_url('kepegawaian/dosen/belum_nidn');?>" class="btn btn-sm btn-green">DETAIL BELUM NIDN</a></span>
             <span><a href="<?php echo base_url('kepegawaian/dosen/belum_serdos');?>" class="btn btn-sm btn-primary" >DETAIL BELUM SERDOS</a></span>

@@ -22,7 +22,7 @@
 							<div class="row">
                                 <div class="col-xl-7 col-lg-8">
                                     <?php echo $this->session->flashdata('notifpagu') ?>
-                                    <form method="POST" action="<?php echo base_url() ?>uploads/uploadPagu" enctype="multipart/form-data">
+                                    <form method="POST" action="<?php echo base_url() ?>uploads/uploadSASjatinangor" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="exampleInputEmail2">UNGGAH FILE EXCEL JATINANGOR</label>
                                             <span class="ml-2">
@@ -32,6 +32,25 @@
                                         </div>
 
                                         <button id="pagu" type="submit" class="btn btn-success">UPLOAD REKAP JATINANGOR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8">
+                                    <?php echo $this->session->flashdata('jakarta') ?>
+                                    <form method="POST" action="<?php echo base_url() ?>uploads/uploadSASjakarta" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail2">UNGGAH FILE EXCEL JAKARTA</label>
+                                            <span class="ml-2">
+                                                <i class="fa fa-info-circle" data-toggle="popover" data-trigger="hover" data-title="Format yang diupload .xlsx" data-placement="top" data-content=""></i>
+                                            </span>
+                                            <input for="jakarta" type="file" name="jakarta" class="form-control">
+                                        </div>
+
+                                        <button id="jakarta" type="submit" class="btn btn-success">UPLOAD REKAP JAKARTA</button>
                                     </form>
                                 </div>
                             </div>

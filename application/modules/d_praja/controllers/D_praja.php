@@ -133,7 +133,7 @@ class D_praja extends CI_Controller
 
 
 
-      if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'Keprajaan'){
+      if($this->session->userdata('role') == 'Admin' ||  $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'Keprajaan'){
 
 
       $opsi = "<a 
@@ -198,86 +198,90 @@ class D_praja extends CI_Controller
        data-penghasilan_wali='$r->penghasilan_wali'
        data-tlp_wali='$r->tlp_wali'
 
-       data-toggle='modal' data-target='#show-data' class='btn btn-info'><i class='fa fas fa-eye'></i>
-       </a> <a href='d_praja/edt/$r->npp' class='btn btn-sm btn-warning' btn-sm><i class='fa fa-edit'></i></a>  ";
+       data-toggle='modal' data-target='#show-data' class='btn btn-success'><i class='fa fas fa-eye'></i>
+       </a> <a href='d_praja/edt/$r->npp' class='btn btn-primary'><i class='fa fas fa-edit'></i></a>  ";
 
        
         // $opsi = "<a href='d_praja/detail/$r->id' class='btn btn-sm btn-primary' btn-sm><i class='fa fa-eye'></i></a>  <a href='d_praja/edt/$r->id' class='btn btn-sm btn-warning' btn-sm><i class='fa fa-edit'></i></a>  ";
         // <a href='#' class='btn btn-sm btn-primary' data-toggle='modal' data-target='#editpraja$r->id'><i class='fa fas fa-edit'></i></a>
      }else{
-      $opsi = "<a href='d_praja/detail/$r->id' class='btn btn-sm btn-primary' btn-sm><i class='fa fa-eye'></i></a>";
+      $opsi = "<a 
+       href='javascript:;' 
+       data-id='$r->id' 
+       data-nama='$r->nama' 
+       data-npp='$r->npp' 
+       data-jk='$r->jk' 
+       data-nisn='$r->nisn' 
+       data-no_spcp='$r->no_spcp' 
+       data-npwp='$r->npwp' 
+       data-nik_praja='$r->nik_praja' 
+       data-tmpt_lahir='$r->tmpt_lahir' 
+       data-tgl_lahir='$r->tgl_lahir' 
+       data-agama='$r->agama' 
+       data-alamat='$r->alamat'
+       data-rt='$r->rt'
+       data-rw='$r->rw'
+       data-email='$r->email'
+       data-nama_dusun='$r->nama_dusun'
+       data-kelurahan='$r->kelurahan'
+       data-alamat='$r->alamat'
+       data-kecamatan='$r->kecamatan'
+       data-kode_pos='$r->kode_pos'
+       data-provinsi='$r->provinsi'
+       data-jenis_tinggal='$r->jenis_tinggal'
+       data-alat_transport='$r->alat_transport'
+       data-tlp_rumah='$r->tlp_rumah'
+       data-tlp_pribadi='$r->tlp_pribadi'
+       data-kewarganegaraan='$r->kewarganegaraan'
+       data-penerima_pks='$r->penerima_pks'
+       data-no_pks='$r->no_pks'
+       data-prodi='$r->prodi'
+       data-jenis_pendaftaran='$r->jenis_pendaftaran'
+       data-tgl_masuk_kuliah='$r->tgl_masuk_kuliah'
+       data-tahun_masuk_kuliah='$r->tahun_masuk_kuliah'
+       data-pembiayaan='$r->pembiayaan'
+       data-jalur_masuk='$r->jalur_masuk'
+       data-tingkat='$r->tingkat'
+       data-angkatan='$r->angkatan'
+       data-status='$r->status'
+       data-fakultas='$r->fakultas'
+       data-id_ortu='$r->id_ortu'
+       data-nik_ayah='$r->nik_ayah'
+       data-nama_ayah='$r->nama_ayah'
+       data-tgllahir_ayah='$r->tgllahir_ayah'
+       data-pendidikan_ayah='$r->pendidikan_ayah'
+       data-pekerjaan_ayah='$r->pekerjaan_ayah'
+       data-penghasilan_ayah='$r->penghasilan_ayah'
+       data-tlp_ayah='$r->tlp_ayah'
+       data-nik_ibu='$r->nik_ibu'
+       data-nama_ibu='$r->nama_ibu'
+       data-tgllahir_ibu='$r->tgllahir_ibu'
+       data-pendidikan_ibu='$r->pendidikan_ibu'
+       data-pekerjaan_ibu='$r->pekerjaan_ibu'
+       data-penghasilan_ibu='$r->penghasilan_ibu'
+       data-id_wali='$r->id_wali'
+       data-nik_wali='$r->nik_wali'
+       data-tgllahir_wali='$r->tgllahir_wali'
+       data-pendidikan_wali='$r->pendidikan_wali'
+       data-pekerjaan_wali='$r->pekerjaan_wali'
+       data-penghasilan_wali='$r->penghasilan_wali'
+       data-tlp_wali='$r->tlp_wali'
+
+       data-toggle='modal' data-target='#show-data' class='btn btn-success'><i class='fa fas fa-eye'></i>
+       </a>";
     }
-
-    $ex = "<a 
-    href='javascript:;' 
-    data-angkatan='$r->angkatan' 
-    <a href='d_praja/export/$r->angkatan' class='btn btn-sm btn-warning' btn-sm><i class='fa fa-edit'></i></a>  ";
-
 
     // $eksel = "<a href='d_praja/export/$r->angkatan' class='btn btn-sm btn-primary' btn-sm><i class='fa fa-eye'></i></a>";
 
     $dataall[] = array(
       $no++,
-      $opsi,
       $npp ,
       $nama,
       $jk,
-      $nisn ,
-      $no_spcp ,
-      $npwp ,
-      $nik_praja ,
-      $tmpt_lahir ,
-      $tgl_lahir,
-      $agama,
-      $alamat ,
-      $rt,
-      $rw ,
-      $nama_dusun ,
-      $kelurahan ,
-      $kecamatan,
-      $kode_pos,
-      $kab_kota ,
-      $provinsi ,
-      $jenis_tinggal ,
-      $alat_transport ,
-      $tlp_rumah ,
-      $tlp_pribadi,
-      $email ,
-      $kewarganegaraan ,
-      $penerima_pks ,
-      $no_pks ,
-      $prodi ,
-      $jenis_pendaftaran ,
-      $tgl_masuk_kuliah ,
-      $tahun_masuk_kuliah,
-      $pembiayaan ,
-      $jalur_masuk,
-      $tingkat ,
-      $angkatan ,
       $status ,
-      $fakultas ,
-      $id_ortu ,
-      $nik_ayah ,
-      $nama_ayah ,
-      $tgllahir_ayah ,
-      $pendidikan_ayah ,
-      $pekerjaan_ayah ,
-      $penghasilan_ayah ,
-      $tlp_ayah ,
-      $nik_ibu,
-      $nama_ibu ,
-      $tgllahir_ibu ,
-      $pendidikan_ibu ,
-      $pekerjaan_ibu ,
-      $penghasilan_ibu ,
-      $id_wali ,
-      $nik_wali ,
-      $nama_wali,
-      $tgllahir_wali ,
-      $pendidikan_wali ,
-      $pekerjaan_wali,
-      $penghasilan_wali,
-      $tlp_wali 
+      $tingkat ,
+      $angkatan,
+      $opsi
     );
   }
   echo json_encode($dataall);
@@ -696,61 +700,61 @@ foreach($semua_pengguna as $pengguna) {
    // var_dump($pengguna);exit();
 
  $spreadsheet ->setActiveSheetIndex(0)
- ->setCellValue('A'. $kolom, $no_spcp = $pengguna->$no_spcp )
- ->setCellValue('B'. $kolom, $pengguna->$nama)
- ->setCellValue('C'. $kolom, $pengguna->$jk)
- ->setCellValue('D'. $kolom, $pengguna->$nisn )
- ->setCellValue('E'. $kolom, $pengguna->$npwp )
- ->setCellValue('F'. $kolom, $pengguna->$npp )
- ->setCellValue('G'. $kolom, $pengguna->$nik_praja )
- ->setCellValue('H'. $kolom, $pengguna->$tmpt_lahir )
- ->setCellValue('I'. $kolom, $pengguna->$tgl_lahir)
- ->setCellValue('J'. $kolom, $pengguna->$agama)
- ->setCellValue('K'. $kolom, $pengguna->$alamat )
- ->setCellValue('L'. $kolom, $pengguna->$rt)
- ->setCellValue('M'. $kolom, $pengguna->$rw )
- ->setCellValue('N'. $kolom, $pengguna->$nama_dusun )
- ->setCellValue('O'. $kolom, $pengguna->$kelurahan )
- ->setCellValue('P'. $kolom, $pengguna->$kecamatan)
- ->setCellValue('Q'. $kolom, $pengguna->$kode_pos)
- ->setCellValue('R'. $kolom, $pengguna->$kab_kota )
- ->setCellValue('S'. $kolom, $pengguna->$provinsi )
- ->setCellValue('T'. $kolom, $pengguna->$jenis_tinggal )
- ->setCellValue('U'. $kolom, $pengguna->$alat_transport )
- ->setCellValue('V'. $kolom, $pengguna->$tlp_rumah )
- ->setCellValue('W'. $kolom, $pengguna->$tlp_pribadi)
- ->setCellValue('X'. $kolom, $pengguna->$email )
- ->setCellValue('Y'. $kolom, $pengguna->$nik_ayah )
- ->setCellValue('Z'. $kolom, $pengguna->$nama_ayah )
- ->setCellValue('AA'. $kolom, $pengguna->$tgllahir_ayah )
- ->setCellValue('AB'. $kolom, $pengguna->$pendidikan_ayah )
- ->setCellValue('AC'. $kolom, $pengguna->$pekerjaan_ayah )
- ->setCellValue('AD'. $kolom, $pengguna->$penghasilan_ayah )
- ->setCellValue('AE'. $kolom, $pengguna->$tlp_ayah )
- ->setCellValue('AF'. $kolom, $pengguna->$nik_ibu)
- ->setCellValue('AG'. $kolom, $pengguna->$nama_ibu )
- ->setCellValue('AH'. $kolom, $pengguna->$tgllahir_ibu )
- ->setCellValue('AI'. $kolom, $pengguna->$pendidikan_ibu )
- ->setCellValue('AJ'. $kolom, $pengguna->$pekerjaan_ibu )
- ->setCellValue('AK'. $kolom, $pengguna->$penghasilan_ibu )
- ->setCellValue('AL'. $kolom, $pengguna->$tlp_ibu)
- ->setCellValue('AM'. $kolom, $pengguna->$kewarganegaraan )
- ->setCellValue('AN'. $kolom, $pengguna->$penerima_pks )
- ->setCellValue('AO'. $kolom, $pengguna->$no_pks )
- ->setCellValue('AP'. $kolom, $pengguna->$nik_wali )
- ->setCellValue('AQ'. $kolom, $pengguna->$nama_wali)
- ->setCellValue('AR'. $kolom, $pengguna->$tgllahir_wali )
- ->setCellValue('AS'. $kolom, $pengguna->$pendidikan_wali )
- ->setCellValue('AT'. $kolom, $pengguna->$pekerjaan_wali)
- ->setCellValue('AU'. $kolom, $pengguna->$penghasilan_wali)
- ->setCellValue('AV'. $kolom, $pengguna->$tlp_wali )
- ->setCellValue('AW'. $kolom, $pengguna->$prodi )
- ->setCellValue('AX'. $kolom, $pengguna->$fakultas )
- ->setCellValue('AY'. $kolom, $pengguna->$jenis_pendaftaran )
- ->setCellValue('AZ'. $kolom, $pengguna->$tgl_masuk_kuliah )
- ->setCellValue('BA'. $kolom, $pengguna->$tahun_masuk_kuliah)
- ->setCellValue('BB'. $kolom, $pengguna->$pembiayaan )
- ->setCellValue('BC'. $kolom, $pengguna->$jalur_masuk);
+ ->setCellValue('A'. $kolom, $pengguna->no_spcp )
+ ->setCellValue('B'. $kolom, $pengguna->nama)
+ ->setCellValue('C'. $kolom, $pengguna->jk)
+ ->setCellValue('D'. $kolom, $pengguna->nisn )
+ ->setCellValue('E'. $kolom, $pengguna->npwp )
+ ->setCellValue('F'. $kolom, $pengguna->npp )
+ ->setCellValue('G'. $kolom, $pengguna->nik_praja )
+ ->setCellValue('H'. $kolom, $pengguna->tmpt_lahir )
+ ->setCellValue('I'. $kolom, $pengguna->tgl_lahir)
+ ->setCellValue('J'. $kolom, $pengguna->agama)
+ ->setCellValue('K'. $kolom, $pengguna->alamat )
+ ->setCellValue('L'. $kolom, $pengguna->rt)
+ ->setCellValue('M'. $kolom, $pengguna->rw )
+ ->setCellValue('N'. $kolom, $pengguna->nama_dusun )
+ ->setCellValue('O'. $kolom, $pengguna->kelurahan )
+ ->setCellValue('P'. $kolom, $pengguna->kecamatan)
+ ->setCellValue('Q'. $kolom, $pengguna->kode_pos)
+ ->setCellValue('R'. $kolom, $pengguna->kab_kota )
+ ->setCellValue('S'. $kolom, $pengguna->provinsi )
+ ->setCellValue('T'. $kolom, $pengguna->jenis_tinggal )
+ ->setCellValue('U'. $kolom, $pengguna->alat_transport )
+ ->setCellValue('V'. $kolom, $pengguna->tlp_rumah )
+ ->setCellValue('W'. $kolom, $pengguna->tlp_pribadi)
+ ->setCellValue('X'. $kolom, $pengguna->email )
+ ->setCellValue('Y'. $kolom, $pengguna->nik_ayah )
+ ->setCellValue('Z'. $kolom, $pengguna->nama_ayah )
+ ->setCellValue('AA'. $kolom, $pengguna->tgllahir_ayah )
+ ->setCellValue('AB'. $kolom, $pengguna->pendidikan_ayah )
+ ->setCellValue('AC'. $kolom, $pengguna->pekerjaan_ayah )
+ ->setCellValue('AD'. $kolom, $pengguna->penghasilan_ayah )
+ ->setCellValue('AE'. $kolom, $pengguna->tlp_ayah )
+ ->setCellValue('AF'. $kolom, $pengguna->nik_ibu)
+ ->setCellValue('AG'. $kolom, $pengguna->nama_ibu )
+ ->setCellValue('AH'. $kolom, $pengguna->tgllahir_ibu )
+ ->setCellValue('AI'. $kolom, $pengguna->pendidikan_ibu )
+ ->setCellValue('AJ'. $kolom, $pengguna->pekerjaan_ibu )
+ ->setCellValue('AK'. $kolom, $pengguna->penghasilan_ibu )
+ ->setCellValue('AL'. $kolom, $pengguna->tlp_ibu)
+ ->setCellValue('AM'. $kolom, $pengguna->kewarganegaraan )
+ ->setCellValue('AN'. $kolom, $pengguna->penerima_pks )
+ ->setCellValue('AO'. $kolom, $pengguna->no_pks )
+ ->setCellValue('AP'. $kolom, $pengguna->nik_wali )
+ ->setCellValue('AQ'. $kolom, $pengguna->nama_wali)
+ ->setCellValue('AR'. $kolom, $pengguna->tgllahir_wali )
+ ->setCellValue('AS'. $kolom, $pengguna->pendidikan_wali )
+ ->setCellValue('AT'. $kolom, $pengguna->pekerjaan_wali)
+ ->setCellValue('AU'. $kolom, $pengguna->penghasilan_wali)
+ ->setCellValue('AV'. $kolom, $pengguna->tlp_wali )
+ ->setCellValue('AW'. $kolom, $pengguna->prodi )
+ ->setCellValue('AX'. $kolom, $pengguna->fakultas )
+ ->setCellValue('AY'. $kolom, $pengguna->jenis_pendaftaran )
+ ->setCellValue('AZ'. $kolom, $pengguna->tgl_masuk_kuliah )
+ ->setCellValue('BA'. $kolom, $pengguna->tahun_masuk_kuliah)
+ ->setCellValue('BB'. $kolom, $pengguna->pembiayaan )
+ ->setCellValue('BC'. $kolom, $pengguna->jalur_masuk);
 
 
  $kolom++;

@@ -75,13 +75,10 @@ class Home extends CI_Controller {
 
       // ANGKATAN 31
       $angkatan31 = $this->home_model->angkatan_31();
-
       // ANGKATAN 30
       $angkatan30 = $this->home_model->angkatan_30();
-
       // ANGKATAN 29
       $angkatan29 = $this->home_model->angkatan_29();
-
       // ANGKATAN 28
       $angkatan28 = $this->home_model->angkatan_28();
 	    
@@ -114,7 +111,9 @@ class Home extends CI_Controller {
       $apps = $this->home_model->apps();
       
       $berita = $this->home_model->listing();
-      
+      $eksternal = $this->home_model->get_data()->result();
+        
+      $x['eksternal'] = $eksternal;
       $x['berita'] = $berita;
       $x['perpustakaan'] = $perpustakaan;
       $x['akademik'] = $akademik;

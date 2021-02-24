@@ -61,8 +61,6 @@
 					<div class="m-t-20">
 						<!-- Not a member yet? Click <a href="http://ipdn.ac.id/tiket/">here</a> to register. -->
 						Tidak memiliki akun? Click <a href="http://ipdn.ac.id/tiket/" target="_blank">disini</a> untuk mendaftar.
-						<br>
-						Untuk Membuka Website Smart Campus Database <a href="<?= base_url('f_loader'); ?>" target="_blank">Klik Disini</a>.
 					</div>
 				</form>
 			</div>

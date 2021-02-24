@@ -40,7 +40,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -215,7 +215,7 @@ class Ortala extends CI_Controller {
 				$pdf ='Tidak ada file';
 			}
 
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' ||  $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -277,7 +277,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -340,7 +340,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -407,7 +407,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -469,7 +469,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 			$opsi = "<a 
 				href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 				data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -539,7 +539,7 @@ class Ortala extends CI_Controller {
 				$pdf ='Tidak ada file';
 			}
 
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 				$opsi = "<a 
 					href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 					data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -600,7 +600,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 			$opsi = "<a 
 				href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 				data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -662,7 +662,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 			$opsi = "<a 
 				href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 				data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -725,7 +725,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 			$opsi = "<a 
 				href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 				data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'
@@ -787,7 +787,7 @@ class Ortala extends CI_Controller {
 			else {
 				$pdf ='Tidak ada file';
 			}
-			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){
+			if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){
 			$opsi = "<a 
 				href='javascript:;' data-prokum='$d->id_prokum' data-nomor='$d->nomor'  data-tahun='$d->tahun' data-tentang='$d->tentang' data-file='$d->nama_file'
 				data-link='$d->link' data-status='$d->status' data-tanggal='$d->tanggal'

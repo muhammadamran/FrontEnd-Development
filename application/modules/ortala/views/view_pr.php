@@ -55,7 +55,7 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <span>
-                        <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'ortala'){?>
+                        <?php if($this->session->userdata('role') == 'Admin' || $this->session->userdata('role') == 'SuperAdmin' || $this->session->userdata('role') == 'ortala'){?>
                             <a href="" class="btn btn-sm btn-success" data-toggle="modal" data-target="#add_PR">TAMBAH PERATURAN REKTOR</a>
                             <?php } ?>
                         </span>

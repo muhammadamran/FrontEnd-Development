@@ -13,7 +13,7 @@ class Pegawai extends CI_Controller {
 	{
         if($this->session->userdata('nip') != NULL)
         {
-            if($this->session->userdata('role') != 'Admin')
+            if($this->session->userdata('role') != 'SuperAdmin')
             {
                 $this->load->view('Home');
             }else{
